@@ -10,6 +10,23 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/about")
+def about():
+    return render_template("about.html", page_title="About")
+
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html", page_title="Contact")
+
+
+@app.route("/career")
+def career():
+    return render_template("career.html", page_title="Careers")
+
+
+
+
 if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP", "0.0.0.0"),
